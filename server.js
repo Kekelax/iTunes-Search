@@ -14,7 +14,13 @@ Content-Type header matches the type option*/
 app.use(express.urlencoded({ extended: false }));
 
 //helmet security
-app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      "script-src": [" 'nonce-5@F$!nzcyZjvaP' "],
+    },
+  })
+);
 
 //GET function to display data from favmedia.json
 app.get("/api", (req, res) => {
