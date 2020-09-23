@@ -11,15 +11,26 @@ The deployed app:
 Download files and run the following commands:
 
 ```
-#itunessearch (backend)
-npm install
-npm start
+# itunessearch (backend)
+ - Install backend dependencies
+    npm install
 
-#frontend
-npm install
-npm start
+ - Run Express server only
+    npm run server
+
+# frontend
+ - Install frontend dependencies
+    npm install - in the frontend directory
+    npm run frontend-install - in the Express server directory
+
+ - Run the frontend React app
+    npm run frontend
+
+# Run frontend and server concurrently
+    npm run dev
+
 ```
 
-The backend will serve on `localhost:3001/api`.
+The server runs on `localhost:3001/api`.
 
-The frontend app can be viewed in the browser on `localhost:3000`
+The frontend app runs on `localhost:3000`

@@ -161,7 +161,7 @@ class App extends React.Component {
   };
 
   // on load, calls getFav() to fetch data from favmedia.json
-  componentDidMount = () => {
+  componentWillMount = () => {
     this.getFav();
   };
 
