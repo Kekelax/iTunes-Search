@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
+      "default-src": ["'self'"],
       "script-src": [" 'nonce-5@F$!nzcyZjvaP' "],
     },
   })
