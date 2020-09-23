@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha",
-    "start": "pm2 start server.js",
-    "stop": "pm2 stop server.js",
+    "start": "node server.js",
+    "server": "pm2 start server.js",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "KekeT",
