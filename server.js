@@ -89,8 +89,9 @@ app.use(function (err, req, res, next) {
   res.status(500).send("Something broke!");
 });
 
-// Serve up resources build from  the React app
+// Serve static assets if in production
 if (process.env.NODE_ENV === "production") {
+  //set static folder
   app.use(express.static("frontend/build"));
 
   app.get("*", (req, res) => {
