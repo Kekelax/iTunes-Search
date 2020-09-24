@@ -18,7 +18,7 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       "default-src": ["'self'", "https://itunes.apple.com/"],
-      "script-src": ["'self'"],
+      "script-src": ["'self'", "/static/js"],
       "object-src": ["'self'"],
       "img-src": ["'self'", "https://itunes.apple.com/"],
       "connect-src": ["'self'", "https://itunes.apple.com/"],
