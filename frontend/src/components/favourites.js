@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function DisplayFavourites({ favourites, delFav }) {
   /* media maps through favourites array and inputs fields(artworkUrl100,
@@ -13,13 +14,12 @@ export default function DisplayFavourites({ favourites, delFav }) {
     <Col key={fav.trackId.toString()} className="colcard">
       <Card className="card">
         <Card.Header>
-          <i
-            className="material-icons"
+          <FontAwesomeIcon
+            icon={["fas", "trash-alt"]}
+            className="icons"
             name="trash-bin"
             onClick={() => delFav(fav.trackId)}
-          >
-            delete
-          </i>
+          />
         </Card.Header>
         <Card.Img className="cardimg" variant="top" src={fav.artworkUrl100} />
         <Card.Body>

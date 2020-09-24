@@ -8,6 +8,11 @@ import SearchITunes from "./components/searchItunes";
 import DisplayFavourites from "./components/favourites";
 import DisplaySearch from "./components/searchresults";
 
+// Font/icons
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+library.add(fas); // passing all icons in @fortawesome/free-solid-svg-icons
+
 class App extends React.Component {
   constructor(props) {
     super(props);

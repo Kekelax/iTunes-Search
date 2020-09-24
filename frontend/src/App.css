@@ -178,13 +178,13 @@ h1 {
   color: #ff9c00;
 }
 
-i {
+.icons {
   color: #ff9c00;
   position: relative;
   cursor: pointer;
 }
 
-i:hover {
+.icons:hover {
   color: #764800;
 }
 /* Search Results */

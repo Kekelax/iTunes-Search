@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Inline styling
 const favStyle = {
@@ -32,14 +33,12 @@ export default function DisplaySearch({ error, search, favourites, addToFav }) {
     <Col key={result.trackId.toString()} className="colcard">
       <Card className="card">
         <Card.Header>
-          <i
-            name="heart"
-            className="material-icons"
+          <FontAwesomeIcon
+            icon={["fas", "heart"]}
+            className="icons"
             style={isFav(result.trackId)}
             onClick={() => addToFav(result)}
-          >
-            favorite
-          </i>
+          />
         </Card.Header>
         <Card.Img
           className="cardimg"
