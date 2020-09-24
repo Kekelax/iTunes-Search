@@ -66,7 +66,7 @@ class App extends React.Component {
         this.setState({
           iTunes: [],
           issue:
-            "The search has zero results. The item you are looking for is not available on your iTunes store.",
+            "The item you are looking for is not available in the iTunes store.",
         });
       } else {
         //if inputs match something in database -> setState data.results array to results.
@@ -161,7 +161,7 @@ class App extends React.Component {
   };
 
   // on load, calls getFav() to fetch data from favmedia.json
-  componentWillMount = () => {
+  componentDidMount = () => {
     this.getFav();
   };
 

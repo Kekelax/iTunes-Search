@@ -13,11 +13,13 @@ export default function DisplayFavourites({ favourites, delFav }) {
     <Col key={fav.trackId.toString()} className="colcard">
       <Card className="card">
         <Card.Header>
-          <ion-icon
-            className="removefav"
+          <i
+            className="material-icons"
             name="trash-bin"
             onClick={() => delFav(fav.trackId)}
-          ></ion-icon>
+          >
+            delete
+          </i>
         </Card.Header>
         <Card.Img className="cardimg" variant="top" src={fav.artworkUrl100} />
         <Card.Body>

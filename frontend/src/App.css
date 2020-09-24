@@ -135,9 +135,9 @@ button:active {
 .card {
   border: 0.5px solid #ff9c00;
   border-radius: 3px;
-  padding: 3px;
+  padding: 1px;
   margin: 5px;
-  width: 10rem;
+  width: 8rem;
 }
 .cardtext {
   font-weight: lighter;
@@ -151,6 +151,7 @@ button:active {
 .cardtitle {
   font-weight: 200;
   font-size: 20px;
+  align-self: center;
 }
 
 .card-container {
@@ -177,13 +178,13 @@ h1 {
   color: #ff9c00;
 }
 
-ion-icon {
+i {
   color: #ff9c00;
   position: relative;
   cursor: pointer;
 }
 
-ion-icon:hover {
+i:hover {
   color: #764800;
 }
 /* Search Results */

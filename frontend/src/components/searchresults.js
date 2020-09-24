@@ -32,12 +32,14 @@ export default function DisplaySearch({ error, search, favourites, addToFav }) {
     <Col key={result.trackId.toString()} className="colcard">
       <Card className="card">
         <Card.Header>
-          <ion-icon
+          <i
             name="heart"
-            className="favbtn"
+            className="material-icons"
             style={isFav(result.trackId)}
             onClick={() => addToFav(result)}
-          ></ion-icon>
+          >
+            favorite
+          </i>
         </Card.Header>
         <Card.Img
           className="cardimg"
