@@ -17,8 +17,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      "default-src": ["'self'"],
-      "script-src": [" 'nonce-5@F$!nzcyZjvaP' "],
+      "default-src": [
+        "'self'",
+        "https://fonts.googleapis.com",
+        "https://itunes.apple.com/",
+      ],
+      "script-src": ["'self'", "https://fonts.googleapis.com"],
+      "object-src": ["'self'"],
+      "img-src": ["'self'", "https://itunes.apple.com/"],
+      "connect-src ": ["'self'", "https://itunes.apple.com/"],
+      "font-src": ["'self'", "https://fonts.googleapis.com"],
+      "style-src": ["'self'", "https://fonts.googleapis.com"],
     },
   })
 );
