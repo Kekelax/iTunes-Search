@@ -23,10 +23,17 @@ app.use(
         "'sha256-1kri9uKG6Gd9VbixGzyFE/kaQIHihYFdxFKKhgz3b80='",
       ],
       "object-src": ["'self'"],
-      "img-src": ["'self'", "https://itunes.apple.com/"],
+      "img-src": [
+        "'self'",
+        "https://itunes.apple.com/",
+        "'https://mzstatic.com'",
+      ],
       "connect-src": ["'self'", "https://itunes.apple.com/"],
       "font-src": ["'self'"],
-      "style-src": ["'self'", "https://fonts.googleapis.com"],
+      "style-src": [
+        "'self'",
+        "'sha256-UTjtaAWWTyzFjRKbltk24jHijlTbP20C1GUYaWPqg7E='",
+      ],
     },
   })
 );
