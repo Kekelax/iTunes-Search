@@ -22,7 +22,7 @@ app.use(
         "https://fonts.googleapis.com",
         "https://itunes.apple.com/",
       ],
-      "script-src": ["'self'", "https://fonts.googleapis.com"],
+      "script-src": ["'self'"],
       "object-src": ["'self'"],
       "img-src": ["'self'", "https://itunes.apple.com/"],
       "connect-src": ["'self'", "https://itunes.apple.com/"],
