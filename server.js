@@ -1,9 +1,12 @@
 const express = require("express");
 const app = express(); //Initialise express
+const cors = require("cors");
 const helmet = require("helmet");
 const fileHandler = require("fs");
 const path = require("path");
 const favMedia = require("./favmedia");
+
+app.use(cors());
 
 //  ****** Body parser middleware ******* //
 /* Returns middleware that only parses json and only looks at 
@@ -26,7 +29,7 @@ app.use(
       "img-src": [
         "'self'",
         "https://itunes.apple.com/",
-        "'https://mzstatic.com'",
+        "'https://is*-ssl.mzstatic.com'",
       ],
       "connect-src": ["'self'", "https://itunes.apple.com/"],
       "font-src": ["'self'"],
