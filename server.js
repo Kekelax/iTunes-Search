@@ -26,14 +26,14 @@ app.use(
         "'sha256-1kri9uKG6Gd9VbixGzyFE/kaQIHihYFdxFKKhgz3b80='",
       ],
       "object-src": ["'self'"],
-      "img-src": [
-        "'self'",
-        "https://itunes.apple.com/",
-        "'https://is1-ssl.mzstatic.com'",
-        "'https://is2-ssl.mzstatic.com'",
-        "'https://is3-ssl.mzstatic.com'",
-        "'https://is4-ssl.mzstatic.com'",
-      ],
+      // "img-src": [
+      //   "'self'",
+      //   "https://itunes.apple.com/",
+      //   "'https://is1-ssl.mzstatic.com'",
+      //   "'https://is2-ssl.mzstatic.com'",
+      //   "'https://is3-ssl.mzstatic.com'",
+      //   "'https://is4-ssl.mzstatic.com'",
+      // ],
       "connect-src": ["'self'", "https://itunes.apple.com/"],
       "font-src": ["'self'"],
       "style-src": [
