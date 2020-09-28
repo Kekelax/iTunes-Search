@@ -176,7 +176,6 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <div className="cnter">
-            <h1 className="SearchHeading">Search iTunes for Media</h1>
             <SearchITunes itunesSearch={this.itunesSearch} />
             <DisplaySearch
               favourites={this.state.favourites}

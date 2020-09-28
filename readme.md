@@ -4,7 +4,7 @@ App searches for items from the Apple iTunes using the **iTunes Search API** htt
 
 Search items returned can be added to favourites.
 
-The deployed app:
+The deployed app: https://search-itunesza.herokuapp.com/
 
 ## Installation
 

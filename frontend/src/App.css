@@ -49,8 +49,14 @@
   letter-spacing: 4px;
   line-height: 2;
   color: #746f68;
-  margin: 3% 25%;
+  width: max-content;
+
+  padding-bottom: 15px;
 }
+.frmInput {
+  width: max-content;
+}
+
 input[type="text"] {
   background-color: transparent;
   width: 50%;
@@ -115,6 +121,7 @@ button {
   border-radius: 10px !important;
   padding: 10px;
   margin-left: 5px !important;
+
   font-weight: 700 !important;
   letter-spacing: 1px !important;
   font-size: 20px !important;
@@ -155,7 +162,8 @@ button:active {
 }
 
 .card-container {
-  margin: auto 25%;
+  margin: 3px 25%;
+  text-align: center;
 }
 
 .colcard {
@@ -172,6 +180,7 @@ button:active {
 h1 {
   font-size: 40px;
   font-weight: lighter;
+  position: relative;
   letter-spacing: 4px;
   line-height: 2;
   /* color: #ffffff7c; */
