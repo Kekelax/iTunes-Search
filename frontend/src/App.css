@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: #744700;
 }
 
 .App-logo {
@@ -22,10 +23,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  margin: auto 15%;
 }
 
 @keyframes App-logo-spin {
@@ -41,7 +39,7 @@
 
 .SearchForm {
   text-align: center;
-  margin: 3% 25%;
+  margin: 3% 15%;
 }
 .SearchHeading {
   font-size: 40px;
@@ -89,7 +87,7 @@ select {
   color: #ffffff !important;
   font-weight: lighter;
   letter-spacing: 2px !important;
-  margin: 0 20px 30px 0;
+  margin: 0 10px 20px 0;
   font-size: 20px !important;
   cursor: pointer;
   outline: none;
@@ -103,7 +101,7 @@ option {
   color: #ffffff !important;
   font-weight: lighter;
   letter-spacing: 2px !important;
-  margin: 0 20px 30px 0;
+  margin: 0 10px 20px 0;
   font-size: 20px !important;
 }
 
@@ -143,7 +141,7 @@ button:active {
   border: 0.5px solid #ff9c00;
   border-radius: 3px;
   padding: 1px;
-  margin: 5px;
+  margin: 10px;
   width: 12rem;
 }
 .cardtext {
@@ -162,7 +160,7 @@ button:active {
 }
 
 .card-container {
-  margin: 3px 25%;
+  margin: auto 10%;
   text-align: center;
 }
 
@@ -176,6 +174,7 @@ button:active {
 .cardrow {
   display: flex;
   flex-wrap: wrap;
+  margin: auto 5%;
 }
 h1 {
   font-size: 40px;

@@ -49,9 +49,7 @@ class App extends React.Component {
     // gets the form input values and assign them to term and media
     const term = e.target.term.value.replace(" ", "+").trim().toLowerCase(); // replace space with +
     const media = e.target.media.value;
-    const api_call = await fetch(
-      `https://itunes.apple.com/search?term=${term}&media=${media}&country=za&limit=25`
-    ); //Making the API call with the term and media input varibles, and setting the country to za and limit 25.
+    const api_call = await fetch(`itunes/${term},${media}`); //Making the API call with the term and media input varibles, and setting the country to za and limit 25.
 
     if (api_call.status !== 200) {
       //check if api_call is not successful -> send error.
@@ -74,6 +72,7 @@ class App extends React.Component {
             "The item you are looking for is not available in the iTunes store.",
         });
       } else {
+        console.log(data.results);
         //if inputs match something in database -> setState data.results array to results.
         this.setState({
           iTunes: data.results,
@@ -144,7 +143,7 @@ class App extends React.Component {
     }
   };
 
-  //delete favourite from list
+  //deletes favourite from list
   delFav = (trackId) => {
     const newtrackId = trackId.toString();
 

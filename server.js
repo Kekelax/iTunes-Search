@@ -4,8 +4,10 @@ const cors = require("cors");
 const helmet = require("helmet");
 const fileHandler = require("fs");
 const path = require("path");
+const fetch = require("node-fetch");
 const favMedia = require("./favmedia");
 
+// CORS middleware, enables all CORS requests
 app.use(cors());
 
 //  ****** Body parser middleware ******* //
@@ -14,9 +16,9 @@ requests where the Content-Type header matches the type option. */
 app.use(express.json());
 /*only parses urlencoded bodies and only looks at requests where the 
 Content-Type header matches the type option*/
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
-//helmet security
+//helmet security policy
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -48,6 +50,20 @@ app.get("/api", (req, res) => {
       res.send(fav);
     }
   });
+});
+
+// GET data from itunes based on term and media
+app.get(`/itunes/:termmedia`, async (req, res) => {
+  // splits termmedia at the comma
+  const termmedia = req.params.termmedia.split(",");
+  // define term and media to use in the url
+  const term = termmedia[0];
+  const media = termmedia[1];
+
+  const url = `https://itunes.apple.com/search?term=${term}&media=${media}&country=za&limit=25`;
+  const fetch_res = await fetch(url);
+  const data_res = await fetch_res.json();
+  res.json(data_res);
 });
 
 // Adds to favourites to the favmedia.json file
